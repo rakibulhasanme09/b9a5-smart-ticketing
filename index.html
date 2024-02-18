@@ -19,7 +19,7 @@
     <!-- css file link -->
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body class="font-raleway mx-20">
+  <body class="font-raleway mx-2 lg:mx-20">
     <header>
       <nav>
         <div class="navbar bg-base-100">
@@ -62,30 +62,60 @@
             </ul>
           </div>
           <div class="navbar-end">
-            <a class="btn bg-[#1DD1001A] text-[#1DD100] border-[1px] border-[#1DD100]">
-                Bus
-                <img src="./images/bus-icon.png" alt="">
+            <a
+              class="btn bg-[#1DD1001A] text-[#1DD100] border-[1px] border-[#1DD100]"
+            >
+              Bus
+              <img src="./images/bus-icon.png" alt="" />
             </a>
           </div>
         </div>
       </nav>
 
       <!-- banner section -->
-      <div class="bg-white">
-        <div class="hero h-[550px]" style="background-image: url(./images/banner.png);">
-            <div class="hero-overlay bg-opacity-60"></div>
-            <div class="hero-content text-center text-neutral-content">
-              <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
-                <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn btn-primary bg-[#1DD100] text-black font-bold">Buy Tickets</button>
-              </div>
+      <div>
+        <div
+          class="hero h-[550px]"
+          style="background-image: url(./images/banner.png)"
+        >
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-bold">
+                End-to-End Travel with <br />
+                <span class="text-[#1DD100]">P Paribahan</span>
+              </h1>
+              <p class="mb-5">
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </p>
+              <button
+                class="btn btn-primary bg-[#1DD100] text-black font-bold border-0"
+              >
+                Buy Tickets
+              </button>
             </div>
           </div>
+        </div>
       </div>
 
-      
+      <!-- coupon section -->
 
+      <div>
+        <div class="flex justify-center my-10">
+          <h3 class="font-bold text-[40px]">Best offers for you</h3>
+        </div>
+
+        <div class="flex justify-center mb-10 gap-10 flex-col lg:flex-row">
+          <img src="./images/off15.svg" alt="" />
+          <img src="./images/off20.png" alt="" />
+
+        </div>
+        <div class="flex justify-center mb-20">
+          <button class="btn text-[#1DD100] border-[1px] border-[#1DD100]">See All Offers</button>
+        </div>
+      </div>
     </header>
   </body>
 </html>
