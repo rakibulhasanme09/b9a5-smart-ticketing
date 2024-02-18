@@ -100,7 +100,7 @@
 
     <!-- ticket  -->
 
-    <div class="pt-20 bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100]">
+    <div class="py-20 bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100]">
       <div class="mx-2 lg:mx-20">
         <div class="flex flex-col pb-10 items-center gap-10">
           <h3 class="font-bold text-[40px]">P.H Paribahan</h3>
@@ -119,8 +119,161 @@
             </p>
           </div>
         </div>
-        
+
+        <!-- seat selection section -->
+        <div class="bg-white rounded-3xl p-10 flex justify-around">
+          <div>
+            <h3 class="font-semibold text-2xl my-5">Select Your Seat</h3>
+            <hr class="my-5">
+            <div class="flex justify-between">
+              <p class="flex"><img src="./images/seat-gray.png" alt=""> Available</p>
+              <p class="flex"><img src="./images/seat-green-filled.png" alt="">Selected</p>
+            </div>
+            <hr class="my-5">
+
+            <div>
+              <!-- seats -->
+              <div>
+                <div class="flex justify-end">
+                  <p class="btn px-6"><img src="./images/wheel.svg" alt=""></p>
+                </div>
+                <div>
+                  <!-- A -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>A</button>
+                    <p id="A1" class="btn px-8">A1</p>
+                    <p id="A2" class="btn px-8">A2</p>
+                    <p id="A3" class="btn px-8">A3</p>
+                    <p id="A4" class="btn px-8">A4</p>
+                  </div>
+                  <!-- B -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>B</button>
+                    <p id="B1" class="btn px-8">B1</p>
+                    <p id="B2" class="btn px-8">B2</p>
+                    <p id="B3" class="btn px-8">B3</p>
+                    <p id="B4" class="btn px-8">B4</p>
+                  </div>
+                  <!-- C -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>C</button>
+                    <p id="C1" class="btn px-8">C1</p>
+                    <p id="C2" class="btn px-8">C2</p>
+                    <p id="C3" class="btn px-8">C3</p>
+                    <p id="C4" class="btn px-8">C4</p>
+                  </div>
+                  <!-- D -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>D</button>
+                    <p id="D1" class="btn px-8">D1</p>
+                    <p id="D2" class="btn px-8">D2</p>
+                    <p id="D3" class="btn px-8">D3</p>
+                    <p id="D4" class="btn px-8">D4</p>
+                  </div>
+                  <!-- E -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>E</button>
+                    <p id="E1" class="btn px-8">E1</p>
+                    <p id="E2" class="btn px-8">E2</p>
+                    <p id="E3" class="btn px-8">E3</p>
+                    <p id="E4" class="btn px-8">E4</p>
+                  </div>
+                  <!-- F -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>F</button>
+                    <p id="F1" class="btn px-8">F1</p>
+                    <p id="F2" class="btn px-8">F2</p>
+                    <p id="F3" class="btn px-8">F3</p>
+                    <p id="F4" class="btn px-8">F4</p>
+                  </div>
+                  <!-- G -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>G</button>
+                    <p id="G1" class="btn px-8">G1</p>
+                    <p id="G2" class="btn px-8">G2</p>
+                    <p id="G3" class="btn px-8">G3</p>
+                    <p id="G4" class="btn px-8">G4</p>
+                  </div>
+                  <!-- H -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>H</button>
+                    <p id="H1" class="btn px-8">H1</p>
+                    <p id="H2" class="btn px-8">H2</p>
+                    <p id="H3" class="btn px-8">H3</p>
+                    <p id="H4" class="btn px-8">H4</p>
+                  </div>
+                  <!-- I -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>I</button>
+                    <p id="I1" class="btn px-8">I1</p>
+                    <p id="I2" class="btn px-8">I2</p>
+                    <p id="I3" class="btn px-8">I3</p>
+                    <p id="I4" class="btn px-8">I4</p>
+                  </div>
+                  <!-- J -->
+                  <div class="flex justify-between my-4 gap-5">
+                    <button>J</button>
+                    <p id="J1" class="btn px-8">J1</p>
+                    <p id="J2" class="btn px-8">J2</p>
+                    <p id="J3" class="btn px-8">J3</p>
+                    <p id="J4" class="btn px-8">J4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- selected seats -->
+          <div>
+            <h3 class="font-semibold text-2xl my-5">Select Your Seat</h3>
+            <hr class="my-5">
+            <div class="bg-[#F7F8F8] p-4 rounded-xl">
+              <div class="flex justify-between">
+                <p class="font-semibold">Seat</p>
+                <p class="font-semibold">Class</p>
+                <p class="font-semibold">Price</p>
+              </div>
+              <hr class="my-3">
+              <div class="flex justify-between gap-[150px]">
+                <p>A1</p>
+                <p>Economy</p>
+                <p>550</p>
+              </div>
+              <hr class="my-3">
+              <div class="flex justify-between">
+                <p class="font-semibold">Total Price</p>
+                <p class="font-semibold">BDT <span>550</span></p>
+              </div>
+              <div class="my-6 flex gap-6">
+                <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full max-w-xs" />
+                <button class="btn bg-[#1DD100]">Apply</button>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-semibold">Grand Total</p>
+                <p class="font-semibold">BDT <span>550</span></p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 mt-10">
+              <h3 class="font-semibold">Passenger Name*</h3>
+              <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-full" />
+
+              <h3 class="font-semibold">Phone Number*</h3>
+              <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-full" />
+
+              <h3 class="font-semibold">Email ID</h3>
+              <input type="text" placeholder="Enter your email id" class="input input-bordered w-full max-w-full" />
+              <button class="btn bg-[#1DD100] text-white max-w-full">Next</button>
+
+              <div class="flex justify-between">
+                <a href="">Terms and Conditions</a>
+                <a href="">Cancellation Policy</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
+      
     </div>
   </main>
 </body>
