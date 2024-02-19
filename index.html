@@ -87,9 +87,31 @@
         <h3 class="font-bold text-[40px]">Best offers for you</h3>
       </div>
 
-      <div class="flex justify-center mb-10 gap-10 flex-col lg:flex-row">
-        <img src="./images/off15.svg" alt="" />
-        <img src="./images/off20.png" alt="" />
+      <div class="flex justify-center mb-10 gap-10">
+        <div class="flex justify-between w-[40%] p-10 rounded-3xl bg-[#1DD100]">
+          <div class="flex flex-col justify-center gap-2">
+            <h3 class="font-bold text-5xl">15% OFF</h3>
+            <p class="font-semibold text-xl">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+
+          <div class="flex flex-col justify-center gap-2">
+            <h3 class="font-bold text-4xl">NEW15</h3>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+        <div class="flex justify-between w-[40%] p-10 rounded-3xl bg-[#F78C9C]">
+          <div class="flex flex-col justify-center gap-2">
+            <h3 class="font-bold text-5xl">20% OFF</h3>
+            <p class="font-semibold text-xl">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+
+          <div class="flex flex-col justify-center gap-2">
+            <h3 class="font-bold text-4xl">Couple 20</h3>
+            <p>Coupon Code</p>
+          </div>
+        </div>
       </div>
       <div class="flex justify-center mb-20">
         <button class="btn text-[#1DD100] border-[1px] border-[#1DD100]">
@@ -147,12 +169,12 @@
           </div>
           <div class="flex flex-col gap-5 justify-center items-center w-[30%]">
             <img src="./images/fare.png" class="h-[48px] w-[48px]" alt="">
-            <h3 class="font-bold text-3xl">500 Taka</h3>
+            <h3 class="font-bold text-3xl">550 Taka</h3>
             <p class="font-semibold text-2xl">Per Seat</p>
           </div>
         </div>
 
-        
+
 
         <!-- seat selection section -->
         <div id="ticketSection" class="bg-white rounded-3xl p-10 flex justify-around mt-10">
@@ -256,7 +278,7 @@
               </div>
             </div>
           </div>
-          
+
           <!-- selected seats -->
           <div>
             <h3 class="font-semibold text-2xl my-5">Select Your Seat</h3>
@@ -273,16 +295,21 @@
               </div>
               <hr class="my-3">
               <div id="selectedSeatDetails">
-                
+
               </div>
               <hr class="my-3">
               <div class="flex justify-between gap-[150px]">
                 <p class="font-semibold">Total Price</p>
                 <p class="font-semibold">BDT <span id="totalPrice">0</span></p>
               </div>
-              <div class="my-6 flex gap-6">
-                <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full max-w-xs" />
-                <button class="btn bg-[#1DD100]">Apply</button>
+              <div id="coupon" class="my-6 flex gap-6">
+                <input id="couponInput" type="text" placeholder="Have any coupon?"
+                  class="input input-bordered w-full max-w-xs" />
+                <button id="couponApply" class="btn bg-[#1DD100]" onclick="couponDiscount()" disabled>Apply</button>
+              </div>
+              <div id="dicPrice" class="flex justify-between gap-[150px] hidden">
+                <p id="disPer" class="font-semibold"></p>
+                <p class="font-semibold">BDT <span id="disAmount">0</span></p>
               </div>
               <div class="flex justify-between">
                 <p class="font-semibold">Grand Total</p>
@@ -305,14 +332,14 @@
                 <a href="">Cancellation Policy</a>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
-      
+
     </div>
   </main>
-  
+
   <script src="./js/utilities.js"></script>
 </body>
 

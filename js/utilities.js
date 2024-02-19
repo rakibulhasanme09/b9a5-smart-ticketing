@@ -72,10 +72,64 @@ function selectSeat(seatNo) {
             let grandTotPrice = document.getElementById('grandTotalPrice');
             grandTotPrice.innerText = 550 * selectedSeats.length;
 
-            console.log(selectedSeats);
-            console.log("not selected");
-            console.log(selectedSeats.length);
-
         }
     }
 }
+
+// checking coupon is valid or not
+document.getElementById("couponInput").addEventListener('keyup', function (event) {
+    let couponCode = document.getElementById('couponApply')
+    if (0 < selectedSeats.length && event.target.value == 'NEW15' || event.target.value == 'Couple 20') {
+        console.log(event.target.value);
+        couponCode.removeAttribute('disabled');
+    }
+    else {
+        couponCode.setAttribute('disabled', true);
+    }
+})
+
+// apply coupon discount
+function couponDiscount() {
+    let couponCode = document.getElementById('couponInput')
+    let hideBtn = document.getElementById('coupon');
+    console.log(couponCode);
+    if (couponCode.value === 'NEW15') {
+        let grandTotalPrice = document.getElementById('grandTotalPrice');
+        let discountedPrice = parseInt(grandTotalPrice.innerText)
+        let discount = discountedPrice * (15 / 100);
+        discountedPrice = discountedPrice - (discountedPrice * (15 / 100));
+        grandTotalPrice.innerText = discountedPrice;
+        hideBtn.classList.add('hidden');
+
+        let dicPrice = document.getElementById('dicPrice');
+        dicPrice.classList.remove('hidden');
+
+        let disPer = document.getElementById('disPer');
+        disPer.innerText= 'You Got 15% Discount:';
+
+        let disAmount = document.getElementById('disAmount');
+        disAmount.innerText= discount;
+
+
+    }
+    else if (couponCode.value === 'Couple 20') {
+        let grandTotalPrice = document.getElementById('grandTotalPrice');
+        let discountedPrice = parseInt(grandTotalPrice.innerText)
+        let discount = discountedPrice * (20 / 100);
+        discountedPrice = discountedPrice - (discountedPrice * (20 / 100));
+        grandTotalPrice.innerText = discountedPrice;
+        hideBtn.classList.add('hidden');
+
+        let dicPrice = document.getElementById('dicPrice');
+        dicPrice.classList.remove('hidden');
+
+        let disPer = document.getElementById('disPer');
+        disPer.innerText= 'You Got 20% Discount:';
+
+        let disAmount = document.getElementById('disAmount');
+        disAmount.innerText= discount;
+    }
+
+
+}
+
