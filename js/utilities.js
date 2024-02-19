@@ -126,3 +126,16 @@ function couponDiscount() {
 
 }
 
+
+document.getElementById('phoneNum').addEventListener('keyup', function(event){
+    let num = event.target.value;
+    let nextBtn = document.getElementById('nextBtn');
+    if(num.length>0 && selectedSeats.length>0){
+        nextBtn.removeAttribute('disabled');
+    }
+    else{
+        nextBtn.setAttribute('disabled',true);
+    }
+
+});
+
