@@ -1,8 +1,3 @@
-function unhideTicketSection() {
-    const ticketSection = document.getElementById('ticketSection');
-    ticketSection.classList.remove('hidden');
-}
-
 const selectedSeats = [];
 
 function selectSeat(seatNo) {
@@ -72,21 +67,19 @@ function selectSeat(seatNo) {
             let grandTotPrice = document.getElementById('grandTotalPrice');
             grandTotPrice.innerText = 550 * selectedSeats.length;
 
+            // checking coupon is valid or not
+            let couponCode = document.getElementById('couponApply')
+            if (selectedSeats.length===4) {
+                couponCode.removeAttribute('disabled');
+            }
+            else {
+                couponCode.setAttribute('disabled', true);
+            }
+
         }
     }
 }
 
-// checking coupon is valid or not
-document.getElementById("couponInput").addEventListener('keyup', function (event) {
-    let couponCode = document.getElementById('couponApply')
-    if (0 < selectedSeats.length && event.target.value == 'NEW15' || event.target.value == 'Couple 20') {
-        console.log(event.target.value);
-        couponCode.removeAttribute('disabled');
-    }
-    else {
-        couponCode.setAttribute('disabled', true);
-    }
-})
 
 // apply coupon discount
 function couponDiscount() {
@@ -105,10 +98,10 @@ function couponDiscount() {
         dicPrice.classList.remove('hidden');
 
         let disPer = document.getElementById('disPer');
-        disPer.innerText= 'You Got 15% Discount:';
+        disPer.innerText = 'You Got 15% Discount:';
 
         let disAmount = document.getElementById('disAmount');
-        disAmount.innerText= discount;
+        disAmount.innerText = discount;
 
 
     }
@@ -124,10 +117,10 @@ function couponDiscount() {
         dicPrice.classList.remove('hidden');
 
         let disPer = document.getElementById('disPer');
-        disPer.innerText= 'You Got 20% Discount:';
+        disPer.innerText = 'You Got 20% Discount:';
 
         let disAmount = document.getElementById('disAmount');
-        disAmount.innerText= discount;
+        disAmount.innerText = discount;
     }
 
 
