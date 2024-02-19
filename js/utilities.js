@@ -44,7 +44,7 @@ function selectSeat(seatNo) {
             createdDiv.classList.add('justify-between');
             createdDiv.classList.add('gap-[150px]');
 
-            // adding details
+            // adding details to right bar
 
             // adding seat no
             const seatNumP = document.createElement("p");
@@ -64,18 +64,18 @@ function selectSeat(seatNo) {
             seatPriceP.appendChild(seatPrice);
             createdDiv.appendChild(seatPriceP);
 
+            // update total price
+            let totPrice = document.getElementById('totalPrice');
+            totPrice.innerText = 550 * selectedSeats.length;
+
+            // update grand total price
+            let grandTotPrice = document.getElementById('grandTotalPrice');
+            grandTotPrice.innerText = 550 * selectedSeats.length;
+
             console.log(selectedSeats);
             console.log("not selected");
             console.log(selectedSeats.length);
 
         }
-        else {
-            console.log("4 seat selected");
-        }
-
     }
-    else {
-        console.log('Already Selected');
-    }
-
 }
